@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "StreamingService",
+      "request": "launch",
+      "mainClass": "StreamingService",
+      "projectName": "Java 2026_6365d348"
+    },
+    {
+      "type": "java",
       "name": "StreamingServicesApplication",
       "request": "launch",
       "mainClass": "StreamingServicesApplication",
