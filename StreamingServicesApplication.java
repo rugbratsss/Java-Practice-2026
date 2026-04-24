@@ -4,10 +4,10 @@ public class StreamingServicesApplication {
     public static void displayStreamingServices(String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings)
     {
         System.out.println("=========================================================================");
-        System.out.println("Service Providers\tCountry\tSubscribers\tUser Ratings");
+        System.out.println("Service Providers\tCountry\t\tSubscribers\tUser Ratings");
         for(int i = 0; i < serviceProviders.length; i++)
         {    
-            System.out.println(serviceProviders[i] + "\t" + originCountry[i] + "\t" + subscribers[i] + "\t" + userRatings[i]);
+            System.out.println(serviceProviders[i] + "\t\t\t" + originCountry[i] + "\t" + subscribers[i] + "\t\t" + userRatings[i]);
         }
     }
     public static void sortServiceProvider (String[] serviceProviders, String[] originCountry, int[] subscribers, int[] userRatings)
