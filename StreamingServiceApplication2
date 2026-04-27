@@ -1,0 +1,16 @@
+public static void main(String[] args)
+    {
+        Scanner kb = new Scanner(System.in);
+         
+        String[] serviceProviders = {"YouTube", "Netflix", "ShowMax", "DSTV", "PrimeTV", "SABC+"};
+        String[] originCountry = {"USA", "USA", "RSA", "RSA", "USA", "RSA"};
+        
+        int[] subscribers = new int[serviceProviders.length];
+        int[] userRatings = new int[serviceProviders.length];
+        
+        populateSubscribers(subscribers);
+        populateRatings(userRatings,serviceProviders);
+        int mostWatched = mostWatchedService(subscribers);
+        System.out.println("Most watched service provider is " + serviceProviders[mostWatched] + " with " + subscribers[mostWatched] + " subscribers.");
+        
+        sortServiceProvider(serviceProviders,originCountry,subscribers,userRatings);
