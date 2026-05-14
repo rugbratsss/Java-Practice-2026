@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class FitLifeGymApp{
+	public static void main(String[] args){
+		Scanner kb = new Scanner(System.in);
+		
+		System.out.print("Enter member name: ");
+		String name = kb.nextLine();
+		
+		System.out.print("Enter membership type (Basic/Standard/Premium): ");
+		String membershipType = kb.nextLine();
+		
+		System.out.print("Enter number of months: ");
+		int months = kb.nextInt();
+		
+		GymMember g1 = new GymMember(name,membershipType,months);
+		
+		System.out.println("\n=== FitLife Gym Menu ===\n1. Display member details\n2. Update membership type\n3. Update number of months\n4. Calculate total fee\n5. Exit");
+		boolean menu = true;
+		while(menu){
+			System.out.print("Enter choice: ");
+			int option = kb.nextInt();
+			kb.nextLine();
+			switch(option){
+				case 1:
+					System.out.println("Member name: " + g1.getName());
+					System.out.println("Membership: " + g1.getMembershipType());
+					System.out.println("Months: " + g1.getMonths());
+					break;
+				case 2:
+					System.out.print("Enter new membership type: ");
+					membershipType = kb.nextLine();
+					g1.setMembershipType(membershipType);
+					break;
+				case 3:
+					System.out.print("Enter new number of months: ");
+					months = kb.nextInt();
+					g1.setMonths(months);
+					break;
+				case 4: 
+					System.out.println("Total fee: " + g1.calculateTotalFee());
+					break;
+				case 5:
+					System.out.print("Thank you. Goodbye!");
+					return;
+					default:
+					System.out.print("Inavalid option, try again.");
+			}
+		}
+		
+	}
+}	
